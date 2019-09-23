@@ -52,3 +52,7 @@
         transform: scale(1);
     }
 }
+
+.BottomButtons button {
+    margin: 10px;
+}

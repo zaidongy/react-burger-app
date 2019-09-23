@@ -75,6 +75,21 @@ class BurgerBuilder extends React.Component {
         alert("You continued!");
     }
 
+    // CY Expansion
+    clearIngredientsHandler = () => {
+        this.setState({
+            ingredients: {
+                salad: 0,
+                bacon: 0,
+                cheese: 0,
+                meat: 0
+            },
+            totalPrice: 4,
+            purchaseable: false,
+            purchasing: false
+        });
+    }
+
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -102,6 +117,7 @@ class BurgerBuilder extends React.Component {
                     price={this.state.totalPrice}
                     purchaseable={this.state.purchaseable}
                     ordered={this.purchaseHandler}
+                    cleared={this.clearIngredientsHandler}
                 />
             </Aux>
         );
